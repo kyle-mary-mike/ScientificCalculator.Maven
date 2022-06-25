@@ -4,5 +4,3 @@ Basic Calculator: Mary
 Scientific Functions: Kyle
 Testing: Mike  
 
-
-Mike added something 1
