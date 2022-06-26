@@ -15,7 +15,38 @@ public class MainApplication {
 //    }
 
 
-
+    public static String printGuide() {
+        String guide =
+                "Use these commands to access functions of this awesome calculator:\n" +
+                "'Add'  or '+' -- Add two numbers together\n" +
+                "'Sub'  or '-' -- Subtract second number from first number\n" +
+                "'Mult' or '*' -- Multiply two numbers together\n" +
+                "'Div'  or '/' -- Divide second number into first number\n" +
+                "'Mod'  or '%' -- Modulus, Divide second number from first and show the remainder\n" +
+                "'Sqr'  -- Square the number\n" +
+                "'Sqrt' -- Get the square root of the number\n" +
+                "'Exp'  -- Current value to the power of entered number\n" +
+                "'Invs' -- Calculate the inverse of the current number (1/x)\n" +
+                "'+/-' -- Invert current value. Change from positive to negative or negative to positive\n" +
+                "'SwDis'-- Switch display mode.  Rotate between binary, octal, decimal, hexadecimal\n" +
+                "'M+'   -- Store current value in memory\n" +
+                "'MC'   -- Clear value stored in memory\n" +
+                "'MRC'  -- Recall stored value\n" +
+                "'Sin'  -- Calculate the sin of current value\n" +
+                "'Cos'  -- Calculate the cosine of current value\n" +
+                "'Tan'  -- Calculate the tangent of the current value\n" +
+                "'aSin' -- Calculate Arc Sine aka Inverse Sine of current value\n" +
+                "'aCos' -- Calculate Arc Cosine aka Inverse Cosine of current value\n" +
+                "'aTan' -- Calculate Arc Tangent aka Inverse Tangent of current value\n" +
+                "'Deg'  -- Convert current value to degrees\n" +
+                "'Rad'  -- Convert current value to radians\n" +
+                "'Log'  -- Get the log of current value\n" +
+                "'iLog' -- Get the inverse log of the current value\n" +
+                "'Ln'   -- Natural Logarithm of current value\n" +
+                "'e'    -- Inverse natural logarithm of current value\n" +
+                "'Fact' -- Factorial of current value";
+        return guide;
+    }
 
 
 
@@ -29,17 +60,17 @@ public class MainApplication {
 
         boolean loop = true;
         while(loop) {
-            System.out.println("What would you like to do? \n" + "? for help");
+            System.out.println("What would you like to do? \n" + "Type ? for big beautiful guide");
             userChoice = scan.nextLine();
             if (userChoice.equals("exit")) {
                 System.out.println("Ok, bye!");
                 break;
             }
             else if (userChoice.equals("?")) {
-                System.out.println("Beautiful massive guide here");
+                System.out.println(printGuide());
             }
-            else if (userChoice.equalsIgnoreCase("addition")) {
-                System.out.println("Current Value = " + currentValue + "\n  Enter Second Number");
+            else if (userChoice.equalsIgnoreCase("add")||userChoice.equalsIgnoreCase("+")) {
+                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
                 currentValue = CalculatorCore.addition(currentValue, d1);
                 System.out.println(currentValue);
@@ -50,8 +81,8 @@ public class MainApplication {
 //                double currentValue = CalculatorCore.addition(d1, d2);
 //                System.out.println(currentValue);
             }
-            else if (userChoice.equalsIgnoreCase("subtraction")) {
-                System.out.println("Current Value = " + currentValue + " + Enter Second Number");
+            else if (userChoice.equalsIgnoreCase("addition")) {
+                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
                 currentValue = CalculatorCore.subtraction(currentValue, d1);
                 System.out.println(currentValue);
@@ -73,37 +104,6 @@ public class MainApplication {
             }
 
         }
-
-
-//        System.out.println("Hello! Welcome to the best calculator in the world!\n" +
-//                "What function would you like to access? Enter the number at the beginning of the line: \n" +
-//                "1) Basic calculator functions\n" +
-//                "2) Scientific calculator functions");
-//        userChoice = scan.nextLine();
-//        if (userChoice.equals("1")) {
-//            System.out.println("Good Choice! Here are the basic calculator functions available:\n" +
-//                    "1) Add\n" +
-//                    "2) Subtract\n" +
-//                    "3) Multiply\n" +
-//                    "4) Divide\n" +
-//                    "5) Modulus (Find Remainder)\n" +
-//                    "6) Square (^2)\n" +
-//                    "7) Square Root\n" +
-//                    "8) Calculate Exponentiation\n" +
-//                    "9) Calculate The Inverse (1/x)\n" +
-//                    "10) Invert Your Number (+/-)");
-//        }
-
-//        else if (userChoice.equals("2")) {
-//            System.out.println("Great! Here are the scientific functions you can choose:\n" +
-//                    "1) Change "
-//
-//
-//
-//
-//
-//            )
-//        }
 
     }
 
