@@ -97,7 +97,7 @@ public class MainApplication {
             else if (userChoice.equalsIgnoreCase("div")||userChoice.equalsIgnoreCase("/")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
-                currentValue = CalculatorCore.addition(currentValue, d1);
+                currentValue = CalculatorCore.division(currentValue, d1);
                 System.out.println(currentValue);
 //                try { String s = String.valueOf(d1); my attempt at error handling... does this even go here? -mike
 //                    s = "0";
@@ -110,14 +110,15 @@ public class MainApplication {
             else if (userChoice.equalsIgnoreCase("mod")||userChoice.equalsIgnoreCase("%")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
-                currentValue = CalculatorCore.modulus(currentValue, d1);
+//                currentValue = CalculatorCore.modulus(currentValue, d1);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("sqr")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
-                currentValue = CalculatorCore.square(currentValue, d1);
+//                currentValue = CalculatorCore.square(currentValue, d1);
                 System.out.println(currentValue);
+            }
             else {
                 System.out.print("Not recognized. Try again. ");
             }
