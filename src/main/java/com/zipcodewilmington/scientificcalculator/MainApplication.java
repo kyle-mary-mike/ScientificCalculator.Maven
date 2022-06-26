@@ -1,5 +1,6 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import javax.naming.NameNotFoundException;
 import java.util.Scanner;
 
 public class MainApplication {
@@ -81,24 +82,42 @@ public class MainApplication {
 //                double currentValue = CalculatorCore.addition(d1, d2);
 //                System.out.println(currentValue);
             }
-            else if (userChoice.equalsIgnoreCase("addition")) {
+            else if (userChoice.equalsIgnoreCase("sub")||userChoice.equalsIgnoreCase("-")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
-                currentValue = CalculatorCore.subtraction(currentValue, d1);
+                currentValue = CalculatorCore.addition(currentValue, d1);
                 System.out.println(currentValue);
             }
-            else if (userChoice.equalsIgnoreCase("multiplication")) {
-                System.out.println("Current Value = " + currentValue + " + Enter Second Number");
+            else if (userChoice.equalsIgnoreCase("mult")||userChoice.equalsIgnoreCase("*")) {
+                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
                 currentValue = CalculatorCore.multiplication(currentValue, d1);
                 System.out.println(currentValue);
             }
-            else if (userChoice.equalsIgnoreCase("division")) {
-                System.out.println("Current Value = " + currentValue + " + Enter Second Number");
+            else if (userChoice.equalsIgnoreCase("div")||userChoice.equalsIgnoreCase("/")) {
+                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
-                currentValue = CalculatorCore.division(currentValue, d1);
+                currentValue = CalculatorCore.addition(currentValue, d1);
+                System.out.println(currentValue);
+//                try { String s = String.valueOf(d1); my attempt at error handling... does this even go here? -mike
+//                    s = "0";
+//                }
+//                catch (NumberFormatException e){
+//                    System.out.println("Error");
+//                };
+//                System.out.println(currentValue);
+            }
+            else if (userChoice.equalsIgnoreCase("mod")||userChoice.equalsIgnoreCase("%")) {
+                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
+                double d1 = Double.parseDouble(scan.nextLine());
+                currentValue = CalculatorCore.modulus(currentValue, d1);
                 System.out.println(currentValue);
             }
+            else if (userChoice.equalsIgnoreCase("sqr")) {
+                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
+                double d1 = Double.parseDouble(scan.nextLine());
+                currentValue = CalculatorCore.square(currentValue, d1);
+                System.out.println(currentValue);
             else {
                 System.out.print("Not recognized. Try again. ");
             }

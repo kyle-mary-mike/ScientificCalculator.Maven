@@ -32,6 +32,10 @@ public class CalculatorCore {
         return solution;
     }
 
+    public static void square(double currentValue, double d1) {
+        return;
+    }
+
     ;
 
     public double square(double num1) {
