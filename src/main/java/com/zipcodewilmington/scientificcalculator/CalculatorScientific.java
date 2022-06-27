@@ -72,7 +72,7 @@ public class CalculatorScientific {
     }
     //ANTILOG
     public static double iLog(double num1) {
-        return Math.pow(num1, 10);
+        return Math.pow(10, num1);
     }
     //NATURAL LOG (Ln)
     public static double natLog(double num1) {
