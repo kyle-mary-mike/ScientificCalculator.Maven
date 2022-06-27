@@ -50,8 +50,6 @@ public class MainApplication {
         return guide;
     }
 
-
-
     public static void main(String[] args) {
 
         double currentValue = 0;
@@ -149,13 +147,13 @@ public class MainApplication {
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("MC")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
+                System.out.println("Current Value = " + currentValue);
 //                currentValue = CalculatorScientific.mc();
                 System.out.println("This area is still under construction. Please try again another day.");
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("MRC")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
+                System.out.println("Current Value = " + currentValue);
 //                currentValue = CalculatorScientific.mrc();
                 System.out.println("This area is still under construction. Please try again another day.");
                 System.out.println(currentValue);
@@ -231,10 +229,6 @@ public class MainApplication {
             } catch (Exception e) {
                 System.out.println("Something went wrong! Please make sure you are entering the correct value for the prompt.");
             }
-
         }
-
     }
-
-
 }
