@@ -39,51 +39,51 @@ public class CalculatorScientific {
         return Math.sin(num1);
     }
     //COSINE
-    public double cosine(double num1) {
+    public static double cosine(double num1) {
         return Math.cos(num1);
     }
     //TANGENT
-    public double tangent(double num1) {
+    public static double tangent(double num1) {
         return Math.tan(num1);
     }
     //ARCSINE AKA INVERSE SINE
-    public double inverseSine(double num1) {
+    public static double inverseSine(double num1) {
         return Math.asin(num1);
     }
     //ARC COSINE AKA INVERSE COSINE
-    public double inverseCosine(double num1) {
+    public static double inverseCosine(double num1) {
         return Math.acos(num1);
     }
     //ARC TANGENT AKA INVERSE TANGENT
-    public double inverseTangent(double num1) {
+    public static double inverseTangent(double num1) {
         return Math.atan(num1);
     }
     //DEGREES TO RADIANS
-    public double degreesToRadians(double num1) {
+    public static double degreesToRadians(double num1) {
         return Math.toRadians(num1);
     }
     //RADIANS TO DEGREES
-    public double radiansToDegrees(double num1) {
+    public static double radiansToDegrees(double num1) {
         return Math.toDegrees(num1);
     }
     //LOG
-    public double log(double num1) {
+    public static double log(double num1) {
         return Math.log(num1);
     }
     //ANTILOG
-    public double iLog(double num1) {
+    public static double iLog(double num1) {
         return Math.pow(num1, 10);
     }
     //NATURAL LOG (Ln)
-    public double natLog(double num1) {
+    public static double natLog(double num1) {
         return Math.log1p(num1);
     }
     //INVERSE NATURAL LOGARITHM
-    public double inverseLn(double num1) {
+    public static double inverseLn(double num1) {
         return Math.pow(Math.E, num1);
     }
     //FACTORIAL
-    public double fact(double num1) {
+    public static double fact(double num1) {
         double y = 1;
         for (int x = 2; x <= num1; x++) {
             y = y * x;

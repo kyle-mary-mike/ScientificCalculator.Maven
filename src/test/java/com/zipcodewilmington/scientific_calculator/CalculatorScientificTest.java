@@ -15,16 +15,28 @@ public class CalculatorScientificTest {
     }
 
     @Test
-    public void additionTest() {
-        //Gerkin Statement IF WHEN THEN
+    public void sinTest() {
         //If
-        double firstValue = 1.5;
-        double secondValue = 2;
-        double expected = 3.5;
+        double firstValue = 10;
+        double expected = -0.54;
 
         //When
-        CalculatorCore calculator = new CalculatorCore();
-        double actual = calculator.addition(firstValue, secondValue);
+        CalculatorScientific calculator = new CalculatorScientific();
+        double actual = calculator.sine(firstValue);
+
+        //Then
+        assertEquals(actual, expected, 0.01d);
+    }
+
+    @Test
+    public void cosineTest() {
+        //If
+        double firstValue = 10;
+        double expected = -0.83;
+
+        //When
+        CalculatorScientific calculator = new CalculatorScientific();
+        double actual = calculator.cosine(firstValue);
 
         //Then
         assertEquals(actual, expected, 0.01d);
