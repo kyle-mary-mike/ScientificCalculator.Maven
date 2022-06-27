@@ -2,39 +2,17 @@ package com.zipcodewilmington.scientificcalculator;
 
 public class CalculatorScientific {
 
-//science calc with correct number of decimals: https://www.eeweb.com/tools/online-scientific-calculator/
-
 //- Switch display mode (binary, octal, decimal, hexadecimal)
 //  - `switchDisplayMode()` should rotate through the options
 //  - `switchDisplayMode(String mode)` should set the display to the mode given
-//XXXX- Memory - Store up to one numeric value in memory for recall later (default to 0) *
-//XXXX            - (`M+` key) Add the currently displayed value to the value in memory (store in memory and update display) *
-//XXXX            - (`MC` key) Reset memory *
-//XXXX            - (`MRC` key) Recall the current value from memory to the display *
-//XXXX- Trig functions
-//XXXX- Sine - Calculate the sine of the displayed value and display it
-//XXXX- Cosine - Calculate the cosine of the displayed value and display it
-//XXXX- Tangent - Calculate the tangent of the displayed value and display it
-//XXXX- Inverse Sine
-//XXXX- Inverse Cosine
-//XXXX- Inverse Tangent
+
 //- Switch trig units mode (Degrees, Radians)
 //- `switchUnitsMode()` should rotate through the options
-//- `switchUnitsMode(String mode)` should set the trig units to the type given
-//- Logarithmic functions
-//XXXX- Log
-//- 10<sup>x</sup> (inverse logarithm)
-//- Ln (natural logarithm)
-//- e<sup>x</sup> (inverse natural logarithm)
-//- Factorial function
-
-//    public static double switchDisplayMode(String dispInput){
-//        dispInput = "0";
-//    }
-
-    //SWITCH DISPLAY MODES
 
 
+
+    //DISPLAY MODES
+    //public double toBinary (int num1) {    }
 
 
 
@@ -94,15 +72,23 @@ public class CalculatorScientific {
     }
     //ANTILOG
     public double iLog(double num1) {
-        num1 = Math.pow(num1, 10);
-        return num1;
+        return Math.pow(num1, 10);
     }
     //NATURAL LOG (Ln)
-
-
-
-
-
-
+    public double natLog(double num1) {
+        return Math.log1p(num1);
+    }
+    //INVERSE NATURAL LOGARITHM
+    public double inverseLn(double num1) {
+        return Math.pow(Math.E, num1);
+    }
+    //FACTORIAL
+    public double fact(double num1) {
+        double y = 1;
+        for (int x = 2; x <= num1; x++) {
+            y = y * x;
+        }
+        return y;
+        }
 }
 
