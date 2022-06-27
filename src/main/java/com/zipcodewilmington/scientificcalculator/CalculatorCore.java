@@ -10,23 +10,18 @@ public class CalculatorCore {
         return solution;
     }
 
-    ;
-
     public static double subtraction(double num1, double num2) {
         double solution;
         solution = num1 - num2;
         return solution;
     }
 
-    ;
 
     public static double multiplication(double num1, double num2) {
         double solution;
         solution = num1 * num2;
         return solution;
     }
-
-    ;
 
     public static double division(double num1, double num2) {
         double solution;
@@ -45,26 +40,22 @@ public class CalculatorCore {
         solution = num1 * num1;
         return solution;
     }
-
-    ;
-
-    public double sqrt(double num1) {
+    public static double sqrt(double num1) {
         double solution;
         solution = Math.sqrt(num1);
         return solution;
     }
-
-    public double exponent(double num1, double num2) {
+    public static double exponent(double num1, double num2) {
         double solution;
         solution = Math.pow(num1, num2);
         return solution;
     }
-    public double inverse(double num1) {
+    public static double inverse(double num1) {
         double solution;
         solution = 1 / num1;
         return solution;
     }
-    public double changeSign(double num1) {
+    public static double changeSign(double num1) {
         double solution;
         solution = -num1;
         return solution;

@@ -58,7 +58,7 @@ public class MainApplication {
         double memValue = 0;
 
         Scanner scan = new Scanner(System.in);
-        String userChoice = "";
+        String userChoice;
 
         boolean loop = true;
         while(loop) {
@@ -77,12 +77,6 @@ public class MainApplication {
                 double d1 = Double.parseDouble(scan.nextLine());
                 currentValue = CalculatorCore.addition(currentValue, d1);
                 System.out.println(currentValue);
-
-//                double d1 = Double.parseDouble(scan.nextLine());
-//                System.out.println("Enter second number");
-//                double d2 = Double.parseDouble(scan.nextLine());
-//                double currentValue = CalculatorCore.addition(d1, d2);
-//                System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("sub")||userChoice.equalsIgnoreCase("-")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
@@ -101,18 +95,11 @@ public class MainApplication {
                 double d1 = Double.parseDouble(scan.nextLine());
                 currentValue = CalculatorCore.division(currentValue, d1);
                 System.out.println(currentValue);
-//                try { String s = String.valueOf(d1); my attempt at error handling... does this even go here? -mike
-//                    s = "0";
-//                }
-//                catch (NumberFormatException e){
-//                    System.out.println("Error");
-//                };
-//                System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("mod")||userChoice.equalsIgnoreCase("%")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.modulus(currentValue, d1);
+                currentValue = CalculatorCore.modulus(currentValue, d1);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("disp")) {
@@ -121,133 +108,121 @@ public class MainApplication {
             else if (userChoice.equalsIgnoreCase("sqr")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.square(currentValue);
+                currentValue = CalculatorCore.square(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("Sqrt")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.squareroot(currentValue);
+                currentValue = CalculatorCore.sqrt(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("Exp")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.square(currentValue, d1);
+                currentValue = CalculatorCore.exponent(currentValue, d1);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("Invs")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.inverse(currentValue, d1);
+                currentValue = CalculatorCore.inverse(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("+/-")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.changeSign(currentValue, d1);
+                currentValue = CalculatorCore.changeSign(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("SwDis")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
+                System.out.println("Current Value = " + currentValue);
+//                double d1 = Double.parseDouble(scan.nextLine());
 //                currentValue = CalculatorCore.swDis(currentValue, d1);
+                System.out.println("This area is under construction, please try again another day.");
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("M+")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.m(d1);
+                System.out.println("Current Value = " + currentValue);
+//                currentValue = CalculatorScientific.m(d1);
+                System.out.println("This area is still under construction. Please try again another day.");
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("MC")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.mc();
+//                currentValue = CalculatorScientific.mc();
+                System.out.println("This area is still under construction. Please try again another day.");
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("MRC")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.mrc();
+//                currentValue = CalculatorScientific.mrc();
+                System.out.println("This area is still under construction. Please try again another day.");
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("Sin")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.sin(d1);
+                System.out.println("Current Value = " + currentValue + " Calculating Sine...");
+                currentValue = CalculatorScientific.sine(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("Cos")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.cos(d1);
+                System.out.println("Current Value = " + currentValue + " Calculating Cosine...");
+                currentValue = CalculatorScientific.cosine(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("Tan")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.tan(d1);
+                System.out.println("Current Value = " + currentValue + " Calculating Tangent...");
+                currentValue = CalculatorScientific.tangent(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("aSin")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.aSin(d1);
+                System.out.println("Current Value = " + currentValue + " Calculating Inverse Sine");
+                currentValue = CalculatorScientific.inverseSine(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("aCos")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.aCos(d1);
+                System.out.println("Current Value = " + currentValue + " Calculating Inverse Cosine...");
+                currentValue = CalculatorScientific.inverseCosine(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("aTan")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.aTan(d1);
+                System.out.println("Current Value = " + currentValue + " Calculating Inverse Tangent...");
+                currentValue = CalculatorScientific.inverseTangent(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("Deg")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.deg(d1);
+                System.out.println("Current Value = " + currentValue + " Converting to Degrees...");
+                currentValue = CalculatorScientific.radiansToDegrees(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("Rad")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.rad(d1);
+                System.out.println("Current Value = " + currentValue + " Converting to Radians...");
+                currentValue = CalculatorScientific.degreesToRadians(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("Log")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.log(d1);
+                System.out.println("Current Value = " + currentValue + " Calculating the logarithm...");
+                currentValue = CalculatorScientific.log(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("iLog")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.iLog(d1);
+                System.out.println("Current Value = " + currentValue + " Calculating the inverse logarithm...");
+                currentValue = CalculatorScientific.iLog(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("Ln")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.ln(d1);
+                System.out.println("Current Value = " + currentValue + " Calculating Natural Logarithm (Ln)...");
+                currentValue = CalculatorScientific.natLog(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("e")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.e(d1);
+                System.out.println("Current Value = " + currentValue + " Calculating Inverse Logarithm... ");
+                currentValue = CalculatorScientific.inverseLn(currentValue);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("Fact")) {
-                System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
-                double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.iLog(d1);
+                System.out.println("Current Value = " + currentValue + " Calculating Factorial...");
+                currentValue = CalculatorScientific.fact(currentValue);
                 System.out.println(currentValue);
             }
             else {
