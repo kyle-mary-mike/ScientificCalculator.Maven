@@ -24,6 +24,7 @@ public class MainApplication {
                 "'Mult' or '*' -- Multiply two numbers together\n" +
                 "'Div'  or '/' -- Divide second number into first number\n" +
                 "'Mod'  or '%' -- Modulus, Divide second number from first and show the remainder\n" +
+                "'Disp' -- Display current value\n" +
                 "'Sqr'  -- Square the number\n" +
                 "'Sqrt' -- Get the square root of the number\n" +
                 "'Exp'  -- Current value to the power of entered number\n" +
@@ -61,11 +62,12 @@ public class MainApplication {
 
         boolean loop = true;
         while(loop) {
+            try {
             System.out.println("What would you like to do? \n" + "Type ? for big beautiful guide");
             userChoice = scan.nextLine();
             if (userChoice.equals("exit")) {
                 System.out.println("Ok, bye!");
-                break;
+                loop = false;
             }
             else if (userChoice.equals("?")) {
                 System.out.println(printGuide());
@@ -112,6 +114,9 @@ public class MainApplication {
                 double d1 = Double.parseDouble(scan.nextLine());
 //                currentValue = CalculatorCore.modulus(currentValue, d1);
                 System.out.println(currentValue);
+            }
+            else if (userChoice.equalsIgnoreCase("disp")) {
+                System.out.println("Current Value = " + currentValue);
             }
             else if (userChoice.equalsIgnoreCase("sqr")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
@@ -246,7 +251,10 @@ public class MainApplication {
                 System.out.println(currentValue);
             }
             else {
-                System.out.print("Not recognized. Try again. ");
+                System.out.print("Not recognized. Try again. ");}
+
+            } catch (Exception e) {
+                System.out.println("Something went wrong! Please make sure you are entering the correct value for the prompt.");
             }
 
         }
