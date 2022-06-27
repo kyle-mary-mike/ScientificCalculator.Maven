@@ -46,7 +46,8 @@ public class MainApplication {
                 "'iLog' -- Get the inverse log of the current value\n" +
                 "'Ln'   -- Natural Logarithm of current value\n" +
                 "'e'    -- Inverse natural logarithm of current value\n" +
-                "'Fact' -- Factorial of current value";
+                "'Fact' -- Factorial of current value\n" +
+                "'Feeling Bad' -- Feel better.";
         return guide;
     }
 
@@ -222,6 +223,9 @@ public class MainApplication {
                 System.out.println("Current Value = " + currentValue + " Calculating Factorial...");
                 currentValue = CalculatorScientific.fact(currentValue);
                 System.out.println(currentValue);
+            }
+            else if (userChoice.equalsIgnoreCase("Feeling Bad")) {
+                System.out.println("Is that a new shirt??  I LOVE it!!");
             }
             else {
                 System.out.print("Not recognized. Try again. ");}
