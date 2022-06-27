@@ -140,7 +140,7 @@ public class MainApplication {
             else if (userChoice.equalsIgnoreCase("+/-")) {
                 System.out.println("Current Value = " + currentValue + "\nEnter Second Number");
                 double d1 = Double.parseDouble(scan.nextLine());
-//                currentValue = CalculatorCore.square(currentValue, d1);
+//                currentValue = CalculatorCore.changeSign(currentValue, d1);
                 System.out.println(currentValue);
             }
             else if (userChoice.equalsIgnoreCase("SwDis")) {

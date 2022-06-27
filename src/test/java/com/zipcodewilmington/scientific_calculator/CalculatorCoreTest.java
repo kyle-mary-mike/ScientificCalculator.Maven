@@ -87,4 +87,77 @@ public class CalculatorCoreTest {
         //Then
         assertEquals(actual, expected, 0.01d);
     }
+
+    @Test
+    public void modulusTest() {
+        //If
+        double num1 = 5;
+        double num2 = 3;
+        double expected = 2;
+
+        //When
+        CalculatorCore calculator = new CalculatorCore();
+        double actual = calculator.modulus(num1, num2);
+
+        //Then
+        assertEquals(actual, expected, 0.01d);
+    }
+
+    @Test
+    public void sqrtTest() {
+        //If
+        double num1 = 25;
+        double expected = 5;
+
+        //When
+        CalculatorCore calculator = new CalculatorCore();
+        double actual = calculator.sqrt(num1);
+
+        //Then
+        assertEquals(actual, expected, 0.01d);
+    }
+
+    @Test
+    public void exponentTest() {
+        //If
+        double num1 = 10;
+        double num2 = 2;
+        double expected = 100;
+
+        //When
+        CalculatorCore calculator = new CalculatorCore();
+        double actual = calculator.exponent(num1, num2);
+
+        //Then
+        assertEquals(actual, expected, 0.01d);
+    }
+
+    @Test
+    public void inverseTest() {
+        //If
+        double num1 = 3;
+        double expected = 0.33;
+
+        //When
+        CalculatorCore calculator = new CalculatorCore();
+        double actual = calculator.inverse(num1);
+
+        //Then
+        assertEquals(actual, expected, 0.01d);
+    }
+
+    @Test
+    public void changeSignTest() {
+        //If
+        double num1 = -3;
+        double expected = 3;
+
+        //When
+        CalculatorCore calculator = new CalculatorCore();
+        double actual = calculator.changeSign(num1);
+
+        //Then
+        assertEquals(actual, expected, 0.01d);
+    }
+
 }

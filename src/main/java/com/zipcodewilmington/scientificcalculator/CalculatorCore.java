@@ -5,7 +5,9 @@ public class CalculatorCore {
 
 
     public static double addition(double num1, double num2) {
-        return num1 + num2;
+        double solution;
+        solution = num1 + num2;
+        return solution;
     }
 
     ;
@@ -32,13 +34,13 @@ public class CalculatorCore {
         return solution;
     }
 
-    public static void square(double currentValue, double d1) {
-        return;
+    public static double modulus(double num1, double num2) {
+        double solution;
+        solution = num1 % num2;
+        return solution;
     }
 
-    ;
-
-    public double square(double num1) {
+    public static double square(double num1) {
         double solution;
         solution = num1 * num1;
         return solution;
@@ -52,19 +54,19 @@ public class CalculatorCore {
         return solution;
     }
 
-    public double exponent(double num1) {
+    public double exponent(double num1, double num2) {
         double solution;
-        solution = 0;
+        solution = Math.pow(num1, num2);
         return solution;
     }
     public double inverse(double num1) {
         double solution;
-        solution = 0;
+        solution = 1 / num1;
         return solution;
     }
-    public double changesign(double num1) {
+    public double changeSign(double num1) {
         double solution;
-        solution = 0;
+        solution = -num1;
         return solution;
     }
 }
