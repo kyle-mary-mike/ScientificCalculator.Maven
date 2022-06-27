@@ -4,17 +4,6 @@ import javax.naming.NameNotFoundException;
 import java.util.Scanner;
 
 public class MainApplication {
-//    public static void main(String[] args) {
-//        Console.println("Welcome to my calculator!");
-//        String s = Console.getStringInput("Enter a string");
-//        Integer i = Console.getIntegerInput("Enter an integer");
-//        Double d = Console.getDoubleInput("Enter a double.");
-//
-//        Console.println("The user input %s as a string", s);
-//        Console.println("The user input %s as a integer", i);
-//        Console.println("The user input %s as a d", d);
-//    }
-
 
     public static String printGuide() {
         String guide =
@@ -59,10 +48,12 @@ public class MainApplication {
         Scanner scan = new Scanner(System.in);
         String userChoice;
 
+        System.out.println("Hello Friend! Welcome to the best calculator in the world!\n");
+
         boolean loop = true;
         while(loop) {
             try {
-            System.out.println("What would you like to do? \n" + "Type ? for big beautiful guide");
+            System.out.println("Welcome back! What would you like to do? \n" + "Type '?' for big beautiful guide");
             userChoice = scan.nextLine();
             if (userChoice.equals("exit")) {
                 System.out.println("Ok, bye!");
