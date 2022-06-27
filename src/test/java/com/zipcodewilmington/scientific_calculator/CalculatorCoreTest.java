@@ -5,10 +5,6 @@ import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by leon on 2/9/18.
- */
-
 public class CalculatorCoreTest {
     private CalculatorCore objCalcUnderTest;
 
